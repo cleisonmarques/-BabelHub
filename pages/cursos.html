@@ -3,199 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>🌏BabelHub</title>
+    <!-- Fontes e Ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Link para o seu ficheiro CSS principal (IMPORTANTE) -->
+    <link rel="stylesheet" href="../index.css"/> 
+    <title>Sobre o BabelHub</title>
 </head>
 <body>
-    <!--reader-->
+    
+    <!-- CABEÇALHO (O mesmo da sua página inicial) -->
     <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container-fluid">
-                <img class="logo" src="imagem_cursos/logo paises.jpg" width="40"alt="">
-              <a class="navbar-brand" href="#">BabelHub</a>
-              <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/sobre.html">Sobre o curso</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="pages/cursos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Cursos
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="pages/frances.html">francês</a></li>
-                      <li><a class="dropdown-item" href="pages/ingles.html">inglês</a></li>
-                      <li><a class="dropdown-item" href="pages/espanhol.html">Espanho</a></li>
-                      <li><a class="dropdown-item" href="pages/alemão.html">Alemão</a></li>
-                      <li><a class="dropdown-item" href="pages/italiano.htm">Italiano</a></li>
-                      <li><a class="dropdown-item" href="pages/japones.html">Japones</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="🔎 Busca" aria-label="Search">
-                  <button class="btn btn-dark" type="submit">Busca</button>
-                </form>
-              </div>
-            </div>
-          </nav>
+        <nav class="navbar">
+            <a class="nav-brand" href="../index.html">
+                <img src="../imagem/logo paises.jpg" alt="BabelHub Logo">
+                BabelHub
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-item">Início</a></li>
+                <li><a href="../index.html#cursos" class="nav-item">Cursos</a></li>
+                <li><a href="#sobre-hero" class="nav-item">Sobre</a></li>
+            </ul>
+        </nav>
     </header>
-    <br>
-    <br>
 
-    <!--manu sobre o curso-->
-    <div class="div_pai_curso">
-        <div>
-            <img src="imagem_cursos/aula.png" width="200" alt="">
-        </div>
-        <div>
-            <h1>Inglês Básico </h1>
-            <h2>Boa aula</h2>
-        </div>
-    </div>
-
-     <br>
-     <br>
-  
-    <!--rodaper-->
-    <footer>
-        <div id="footer_content">
-            <div id="footer_contacts">
-                <h1>BabelHub</h1>
-                <p>siga nas redes social a baixo.</p>
-
-                <div id="footer_social_media">
-                    <a href="https://www.instagram.com/c_._marques/" class="footer-link" id="instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="https://www.facebook.com/cleison.marques.16/" class="footer-link" id="facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-
-                    <a href="https://github.com/cleisonmarques" class="footer-link" id="github">
-                      <i class="fa-brands fa-github"></i>
-                    </a>
+    <main class="course-page-main">
+        <!-- SECÇÃO DE TÍTULO DA PÁGINA "SOBRE" -->
+        <section id="sobre-hero" class="course-hero">
+            <div class="course-hero-content">
+                <img src="../imagem_cursos/aula.png" alt="Informação" class="course-icon">
+                <div class="course-title-group">
+                    <h1>Sobre o BabelHub</h1>
+                    <p>A sua jornada para a fluência começa aqui.</p>
                 </div>
             </div>
+        </section>
 
-            <div>
-              <img class="img-footer" src="imagem_cursos/img footer.png" width="200"alt="">
+        <!-- SECÇÃO DE CONTEÚDO -->
+        <section class="about-section-content">
+            <div class="about-grid">
+                <div class="about-text-block">
+                    <h2>Nossa Missão</h2>
+                    <p>No BabelHub, acreditamos que aprender um novo idioma é mais do que memorizar gramática e vocabulário; é embarcar numa aventura épica através de culturas e novas formas de ver o mundo. A nossa plataforma foi criada para ser a sua chave para este universo de possibilidades, oferecendo um método de aprendizagem visual, prático e envolvente.</p>
+                </div>
+                <div class="about-text-block">
+                    <h2>O Que Oferecemos</h2>
+                    <p>Oferecemos uma coleção de cursos de nível básico em diversos idiomas, estruturados em aulas de vídeo fáceis de seguir. Cada curso termina com um quiz interativo para que você possa testar e consolidar os seus conhecimentos. O nosso objetivo é dar-lhe uma base sólida e a confiança necessária para começar a comunicar no seu novo idioma.</p>
+                </div>
             </div>
+            <div class="about-main-image">
+                <img src="../imagem/sobre.png" alt="Pessoas a conversar e a aprender">
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ (O mesmo da sua página inicial) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h4>BabelHub</h4>
+                <p>A sua jornada para a fluência começa aqui.</p>
+            </div>
+            <div class="footer-social">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="https://github.com/cleisonmarques" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/c_._marques/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BabelHub por Cleison Marques. Todos os direitos reservados.</p>
+        </div>
     </footer>
-     
 
-
-
-
-
-
-
-
- <!--styule css-->
-    <style>
-body{
-    background: linear-gradient(72deg, #1a397b 35%, #a0afe2, #597df1 99%); ;
- }
-
-     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
-
-:root {
-    --color-neutral-0: #0e0c0c;
-    --color-neutral-10: #171717;
-    --color-neutral-30: #a8a29e;
-    --color-neutral-40: #f5f5f5;
-
-}
-
-* {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    letter-spacing: 1px;
-}
-
-
-footer {
-    width: 100%;
-    color: var(--color-neutral-40);
-}
-
-.footer-link {
-    text-decoration: none;
-}
-
-#footer_content {
-    background-color: var(--color-neutral-10);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 3rem 3.5rem;
-}
-
-#footer_contacts h1 {
-    margin-bottom: 0.75rem;
-}
-
-#footer_social_media {
-    display: flex;
-    gap: 2rem;
-    margin-top: 1.5rem;
-} 
-
-#footer_social_media .footer-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.5rem;
-    width: 2.5rem;
-    color: var(--color-neutral-40);
-    border-radius: 50%;
-    transition: all 0.4s;
-}
-
-#footer_social_media .footer-link i {
-    font-size: 1.25rem;    
-}
-
-#footer_social_media .footer-link:hover {
-    opacity: 0.8;
-}
-
-#instagram {
-    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
-}
-
-#facebook {
-    background-color: #4267b3;
-}
-
-#github {
-    background-color: #3f3939;
-}
-
-.footer-h1{
-    margin-right:300px;
-    margin-top: 20px;
-}
-
-.img-footer{
-    margin-left: 1200px;
-}
-
-.logo{
-    border-radius: 50%;
-    margin: 5px;
- }
-     
-    </style>
 </body>
 </html>

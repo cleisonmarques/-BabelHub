@@ -1,211 +1,412 @@
-
-
-body{
-    background: linear-gradient(72deg, #1a397b 35%, #a0afe2, #597df1 99%); ;
- }
-
- .logo{
-    border-radius: 50%;
-    margin: 5px;
- }
-  
-
- @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
-
-:root {
-    --color-neutral-0: #0e0c0c;
-    --color-neutral-10: #171717;
-    --color-neutral-30: #a8a29e;
-    --color-neutral-40: #f5f5f5;
-
-}
-
+/* ==========================================================================
+   1. Reset e Configuração Global
+   ========================================================================== */
 * {
-    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    letter-spacing: 1px;
 }
 
+:root {
+    --primary-color: #3B82F6;
+    --primary-hover: #2563EB;
+    --dark-bg: #111827;
+    --dark-bg-secondary: #1F2937;
+    --text-primary: #F9FAFB;
+    --text-secondary: #9CA3AF;
+    --font-family: 'Poppins', sans-serif;
+}
 
-footer {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   2. Cabeçalho (Navbar)
+   ========================================================================== */
+.header {
     width: 100%;
-    color: var(--color-neutral-40);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(249, 250, 251, 0.1);
 }
 
-.footer-link {
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
     text-decoration: none;
 }
 
-#footer_content {
-    background-color: var(--color-neutral-10);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 3rem 3.5rem;
+.nav-brand img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
-#footer_contacts h1 {
-    margin-bottom: 0.75rem;
-}
-
-#footer_social_media {
+.nav-links {
+    list-style: none;
     display: flex;
     gap: 2rem;
-    margin-top: 1.5rem;
-} 
-
-#footer_social_media .footer-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.5rem;
-    width: 2.5rem;
-    color: var(--color-neutral-40);
-    border-radius: 50%;
-    transition: all 0.4s;
 }
 
-#footer_social_media .footer-link i {
-    font-size: 1.25rem;    
+.nav-item {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-#footer_social_media .footer-link:hover {
-    opacity: 0.8;
+.nav-item:hover {
+    color: var(--primary-color);
 }
 
-#instagram {
-    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
-}
-
-#facebook {
-    background-color: #4267b3;
-}
-
-#github {
-    background-color: #3f3939;
-}
-
-.footer-h1{
-    margin-right:300px;
-    margin-top: 20px;
-}
-
-.teste{
-    color: #4267b3;
-}
-
-.cor_h1_p{
-    text-align: center;
-    color: aliceblue;
-    margin-left: 60px;
-    align-self:flex-end;
-}
-
-.div_conteiner{
-    margin-left: 25%;
-    width: 1000px;
-    margin-top: 750px;
-}
-
-.img2{
-    text-align: center;
-}
-
-.img-footer{
-    margin-left:1450px;
-}
-
-.content_pai1{
-    display:flex;
-    flex-direction:column;
-    color:aliceblue;
-    text-align: center;
-    margin-top: 150px;
-}
-
-.imagem_tempo{
-    text-align: center;
-}
-
-.content {
-    text-align: center;
-    height: 520px;
-    width: 935px;
-    border-radius: 20px;
-    overflow: hidden;
+.nav-item::after {
+    content: '';
     position: absolute;
-    top: 35%;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
 }
 
-.content .slide img {
-    height: 100%;
+.nav-item:hover::after {
     width: 100%;
 }
 
-.navigation {
-    position: absolute;
+/* ==========================================================================
+   3. Secção Principal (Hero) - Página Inicial
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    bottom:35%;
-    left: 45%;
-    display: flex;
+    color: white;
 }
-
-.bar {
-    width: 15px;
-    height: 15px;
-    border: 2px solid white;
-    margin: 6px;
-    border-radius: 15px;
-    cursor: pointer;
-    transform: .5s ease;
-
-}
-
-.bar:hover {
-    background-color: white;
-}
-
-input {
-  display: none;
-}
-
-
-.slides {
-    display: flex;
-    width: 500%;
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
 }
-
-.slide {
-    width: 20%;
-    transition: .6s;
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(17, 24, 39, 1), rgba(17, 24, 39, 0.3));
+}
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    margin-bottom: 1rem;
+}
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+.btn-hero {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.btn-hero:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
 }
 
-#slide1:checked ~ .s1 {
-    margin-left: 0;
-} 
+/* ==========================================================================
+   4. Secções Genéricas (Sobre, Cursos)
+   ========================================================================== */
+.about-section, .courses-section {
+    padding: 80px 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.courses-section h2, .about-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+.about-text p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.course-card {
+    background-color: var(--dark-bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+}
+.card-img { width: 100%; height: 200px; object-fit: cover; }
+.card-body { padding: 1.5rem; }
+.card-title { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; }
+.card-text { color: var(--text-secondary); margin-bottom: 1.5rem; }
+.btn-card {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.btn-card:hover { background-color: var(--primary-hover); }
 
-#slide2:checked ~ .s1 {
-    margin-left: -20%;
-} 
+/* ==========================================================================
+   5. Rodapé (Footer)
+   ========================================================================== */
+.footer {
+    background-color: var(--dark-bg-secondary);
+    padding: 4rem 2rem;
+    margin-top: 80px;
+    border-top: 1px solid rgba(249, 250, 251, 0.1);
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.footer-about h4, .footer-social h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.footer-about p {
+    color: var(--text-secondary);
+    max-width: 300px;
+}
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+.social-icons a {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+.social-icons a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(249, 250, 251, 0.1);
+    color: var(--text-secondary);
+}
 
-#slide3:checked ~ .s1 {
-    margin-left: -40%;
-} 
+/* ==========================================================================
+   6. Estilos para Páginas de Curso
+   ========================================================================== */
+.course-page-main {
+    padding-top: 80px;
+}
 
-#slide4:checked ~ .s1 {
-    margin-left: -60%;
-} 
+.course-hero {
+    background-color: var(--dark-bg-secondary);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.course-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .course-hero-content {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+.course-icon {
+    width: 120px;
+    height: 120px;
+}
+.course-title-group h1 {
+    font-size: 2.8rem;
+    color: var(--text-primary);
+}
+.course-title-group p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
 
-#slide5:checked ~ .s1 {
-    margin-left: -80%;
-} 
+.video-section, .quiz-section, .conclusion-section {
+    padding: 60px 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.video-section h2, .quiz-section h2, .conclusion-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+}
+.video-section, .quiz-section, .conclusion-section {
+    text-align: center;
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.video-card {
+    background: var(--dark-bg-secondary);
+    padding: 1rem;
+    border-radius: 12px;
+}
+.video-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.video-card video {
+    width: 100%;
+    border-radius: 8px;
+}
+.quiz-section p {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+.quiz-card {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.conclusion-image {
+    display: block;
+    width: 250px;
+    margin: 0 auto 2rem auto;
+}
 
-.col{
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    
+/* ==========================================================================
+   7. ESTILOS PARA PÁGINA "SOBRE" (ADICIONADOS)
+   ========================================================================== */
+.about-section-content {
+    padding: 60px 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.about-text-block {
+    background: var(--dark-bg-secondary);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.about-text-block h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: left;
+    border-bottom: none;
+}
+
+.about-text-block p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.about-main-image {
+    text-align: center;
+}
+.about-main-image img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 12px;
 }
